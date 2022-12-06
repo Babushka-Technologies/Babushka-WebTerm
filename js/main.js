@@ -10,11 +10,12 @@
  */
 BrowserFS.configure({ fs: 'IndexedDB', options: {} }, function (err) {
     var banner = [
-        '  ____ ___ _____ ',
-        ' / ___|_ _|_   _| __      __   _      _____              _           _',
-        '| |  _ | |  | |   \\ \\    / /__| |__  |_   _|__ _ _ _ __ (_)_ _  __ _| |',
-        '| |_| || |  | |    \\ \\/\\/ / -_) \'_ \\   | |/ -_) \'_| \'  \\| | \' \\/ _` | |',
-        ' \\____|___| |_|     \\_/\\_/\\___|_.__/   |_|\\___|_| |_|_|_|_|_||_\\__,_|_|'
+   '  __          __  _  _______                  '
+   '  \ \        / / | ||__   __|                 '
+   '   \ \  /\  / /__| |__ | | ___ _ __ _ __ ___  '
+   '    \ \/  \/ / _ \  _ \| |/ _ \  __|  _ ` _ \ '
+   '     \  /\  /  __/ |_) | |  __/ |  | | | | | |'
+   '      \/  \/ \___|_.__/|_|\___|_|  |_| |_| |_|'
     ];
     function greetings() {
         var title = this.cols() > banner[1].length ? banner.join('\n') : 'GIT Web Terminal';
@@ -60,13 +61,13 @@ BrowserFS.configure({ fs: 'IndexedDB', options: {} }, function (err) {
     // -----------------------------------------------------------------------------------------------------
     function color(name, string) {
         var colors = {
-            blue:   '#55f',
-            green:  '#4d4',
+            blue:   '#0000ff',
+            green:  '#00ff00',
             grey:   '#999',
-            red:    '#A00',
+            red:    '#ff0000',
             yellow: '#FF5',
             violet: '#a320ce',
-            white:  '#fff',
+            white:  '#ffffff',
             'persian-green': '#0aa'
         };
         if (colors[name]) {
@@ -218,7 +219,7 @@ BrowserFS.configure({ fs: 'IndexedDB', options: {} }, function (err) {
         },
         emacs: function(cmd) {
             if (ymacs_loading) {
-                term.echo('Loading Emacs (it take few seconds, but only first time)...').pause();
+                term.echo('Loading Emacs (Emacs???? USE VI)...').pause();
             }
             ymacs_promise.then(ymacs => {
                 term.resume();
