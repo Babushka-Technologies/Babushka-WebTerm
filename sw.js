@@ -116,7 +116,7 @@ function error404(path) {
         '<!DOCTYPE html>',
         '<html>',
         '<body>',
-        '<h1>404 File Not Found</h1>',
+        '<h1>404 File Not Found Ur Fat</h1>',
         `<p>File ${path} not found in browserfs`,
         '</body>',
         '</html>'
