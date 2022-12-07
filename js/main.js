@@ -1,13 +1,3 @@
-/**@license
- *   ___ ___ _____  __      __   _      _____              _           _
- *  / __|_ _|_   _| \ \    / /__| |__  |_   _|__ _ _ _ __ (_)_ _  __ _| |
- * | (_ || |  | |    \ \/\/ / -_) '_ \   | |/ -_) '_| '  \| | ' \/ _` | |
- *  \___|___| |_|     \_/\_/\___|_.__/   |_|\___|_| |_|_|_|_|_||_\__,_|_|
- *
- * Copyright (c) 2018 Jakub Jankiewicz <http://jcubic.pl/me>
- * Released under the MIT license
- *
- */
 BrowserFS.configure({ fs: 'IndexedDB', options: {} }, function (err) {
     var banner = [
    '  __          __  _  _______                  '
@@ -62,12 +52,12 @@ BrowserFS.configure({ fs: 'IndexedDB', options: {} }, function (err) {
     function color(name, string) {
         var colors = {
             blue:   '#0000ff',
-            green:  '#00ff00',
+            green:  '#00ff',
             grey:   '#999',
             red:    '#ff0000',
             yellow: '#FF5',
             violet: '#a320ce',
-            white:  '#ffffff',
+            white:  '#fff',
             'persian-green': '#0aa'
         };
         if (colors[name]) {
