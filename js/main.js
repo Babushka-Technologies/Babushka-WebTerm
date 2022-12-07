@@ -4,7 +4,7 @@ BrowserFS.configure({ fs: 'IndexedDB', options: {} }, function (err) {
    '  \ \        / / | ||__   __|                 '
    '   \ \  /\  / /__| |__ | | ___ _ __ _ __ ___  '
    '    \ \/  \/ / _ \  _ \| |/ _ \  __|  _ ` _ \ '
-   '     \  /\  /  __/ |_) | |  __/ |  | | | | | |'
+   '     \  /\  /  __/ |_  | |  __/ |  | | | | | |'
    '      \/  \/ \___|_.__/|_|\___|_|  |_| |_| |_|'
     ];
     function greetings() {
@@ -15,7 +15,7 @@ BrowserFS.configure({ fs: 'IndexedDB', options: {} }, function (err) {
     var name = 'git'; // terminal name for history
     if (err) {
         return $('.term').terminal(function(command, term) {
-            term.error('BrowserFS was not initialized');
+            term.error('BrowserFS was not initialized FATTY');
         }, {greetings: false, name}).echo(greetings).error(err.message || err);
     }
     window.fs = BrowserFS.BFSRequire('fs');
@@ -27,14 +27,14 @@ BrowserFS.configure({ fs: 'IndexedDB', options: {} }, function (err) {
                      .then(function(reg) {
                          reg.addEventListener('updatefound', function() {
                              var installingWorker = reg.installing;
-                             console.log('A new service worker is being installed:',
+                             console.log('A new service worker is being installed FATTY:',
                                          installingWorker);
                          });
                          // registration worked
-                         console.log('Registration succeeded. Scope is ' + reg.scope);
+                         console.log('Registration succeeded FATTY. Scope is ' + reg.scope);
                      }).catch(function(error) {
                          // registration failed
-                             console.log('Registration failed with ' + error);
+                             console.log('Registration failed FATTY with ' + error);
                      });
         }
     }
@@ -194,9 +194,9 @@ BrowserFS.configure({ fs: 'IndexedDB', options: {} }, function (err) {
                 term.pause();
                 fs.stat(dirname, (err, stat) => {
                     if (err) {
-                        term.error("Directory doesn't exist").resume();
+                        term.error("Directory doesn't exist FATTY").resume();
                     } else if (stat.isFile()) {
-                        term.error(`"${dirname}" is not a directory`).resume();
+                        term.error(`"${dirname}" is not a directory FATTY`).resume();
                     } else {
                         cwd = dirname == '/' ? dirname : dirname.replace(/\/$/, '');
                         gitBranch({fs, cwd}).then(b => {
@@ -209,7 +209,7 @@ BrowserFS.configure({ fs: 'IndexedDB', options: {} }, function (err) {
         },
         emacs: function(cmd) {
             if (ymacs_loading) {
-                term.echo('Loading Emacs (Emacs???? USE VI)...').pause();
+                term.echo('Loading Emacs (Emacs!!!!!!!)...').pause();
             }
             ymacs_promise.then(ymacs => {
                 term.resume();
@@ -285,7 +285,7 @@ BrowserFS.configure({ fs: 'IndexedDB', options: {} }, function (err) {
                             } else if (err) {
                                 term.error(err.message);
                             } else {
-                                term.error(`${dir} directory don't exists`);
+                                term.error(`${dir} directory don't existing FATTY`);
                             }
                         });
                     }
@@ -323,7 +323,7 @@ BrowserFS.configure({ fs: 'IndexedDB', options: {} }, function (err) {
                     term.pop();
                 }
             }, {
-                prompt: 'are you sure you want clean File System [Y/N]? '
+                prompt: 'are you sure you want clean Ur Mom [Y/N]? '
             });
         },
         rm: function(cmd) {
@@ -1026,19 +1026,7 @@ BrowserFS.configure({ fs: 'IndexedDB', options: {} }, function (err) {
         credits: function() {
             var lines = [
                 '',
-                'Projects used with GIT Web Terminal:',
-                '\t[[!;;;;https://isomorphic-git.github.io]isomorphic-git] v. ' + git.version() + ' by William Hilton',
-                '\t[[!;;;;https://github.com/jvilk/BrowserFS]BrowserFS] by John Vilk',
-                '\t[[!;;;;https://terminal.jcubic.pl]jQuery Terminal] v.' + $.terminal.version + ' by Jakub Jankiewicz',
-                '\t[[!;;;;https://github.com/timoxley/wcwidth]wcwidth] by Tim Oxley',
-                '\t[[!;;;;https://github.com/inexorabletash/polyfill]keyboard key polyfill] by Joshua Bell',
-                '\t[[!;;;;https://github.com/jcubic/jsvi]jsvi] originaly by Internet Connection, Inc. with changes from Jakub Jankiewicz',
-                '\t[[!;;;;https://github.com/Olical/EventEmitter/]EventEmitter] by Oliver Caldwell',
-                '\t[[!;;;;https://github.com/PrismJS/prism]PrimsJS] by Lea Verou',
-                '\t[[!;;;;https://github.com/kpdecker/jsdiff]jsdiff] by Kevin Decker',
-                '\t[[!;;;;https://github.com/softius/php-cross-domain-proxy]AJAX Cross Domain (PHP) Proxy] by Iacovos Constantinou',
-                '',
-                'Contributors:'
+                'hey fatty'
             ].concat(contributors.map(user => '\t[[!;;;;' + user.url + ']' + (user.fullname || user.name) + ']'));
             term.echo(lines.join('\n') + '\n');
         },
